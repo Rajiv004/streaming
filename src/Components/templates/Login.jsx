@@ -19,7 +19,7 @@ function Login({onLogin}) {
     };
     
     return (
-        <div className="overflow-hidden relative w-full h-screen xl:flex bg-[url(public/netflix.jpg)] bg-contain text-white p-10 h-64 w-full ">
+        <div className="overflow-hidden relative w-full h-screen xl:flex bg-[url('/netflix.jpg')] bg-contain text-white p-10 h-64 w-full ">
 
             <div className="flex flex-col items-center">
 
