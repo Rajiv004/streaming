@@ -31,13 +31,13 @@ function Mobilesidenav({ logout }) {
                         <input
                             onChange={(e) => setQuery(e.target.value)}
                             value={query}
-                            className="text-l bg-white/10 backdrop-blur-lg border-1 border-white p-1 rounded-sm outline-none text-zinc-100 w-full mx-2" // add w-full and maybe mx-2 for spacing
+                            className="text-l bg-white/10  backdrop-blur-lg border-1 border-white/30 p-2 rounded-full outline-none text-zinc-100 w-full mx-2" // add w-full and maybe mx-2 for spacing
                             type="text"
                             placeholder="search"
                         />
                         <i
                             onClick={() => setIsOpen(true)}
-                            className="text-white text-2xl font-semibold ri-menu-line cursor-pointer"
+                            className="text-white text-3xl font-semibold ri-menu-line cursor-pointer"
                         ></i>
                     </div>
                     {query.length > 0 && (
