@@ -36,13 +36,13 @@ function Sidenav({logout}) {
         <h1 className="text-white font-semibold  lg:p-3">Website Information</h1>
 
         <Link to="/subscription" className=" p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg hover:duration-500">
-        Subscription
+        <i class="ri-rss-line"></i>Subscription
         </Link>
         <Link to="/contactus" className=" p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg hover:duration-500">
           <i className="mr-2 ri-phone-fill"></i>Contact Us
         </Link>
         
-        <button onClick={logout} className="py-2 bg-zinc-400 hover:bg-[#FF005C] rounded text-xl text-white font-semibold ">Logout</button>
+        <button onClick={logout} className="py-2 bg-[#FF005C] rounded text-xl text-white font-semibold "><i class="text-white ri-logout-box-line"></i>Logout</button>
       </nav>
     </div>
   );

@@ -94,19 +94,19 @@ function Mobilesidenav({ logout }) {
 
                 <nav className="flex flex-col justify-center text-zinc-400 text-lg gap-3 mb-5">
                     <h1 className="text-white whitespace-nowrap font-semibold mt-5 mb-2">New Feeds</h1>
-                    <Link to="/trending" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300">Trending</Link>
-                    <Link to="/popular" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300">Popular</Link>
-                    <Link to="/movie" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300">Movies</Link>
-                    <Link to="/tv" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300">TV shows</Link>
-                    <Link to="/people" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300">People</Link>
+                    <Link to="/trending" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300"> <i className="mr-1 ri-fire-fill"></i>Trending</Link>
+                    <Link to="/popular" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300"><i className="mr-2 ri-bard-fill"></i>Popular</Link>
+                    <Link to="/movie" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300"> <i className="mr-2 ri-movie-2-ai-fill"></i>Movies</Link>
+                    <Link to="/tv" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300"><i className="mr-2 ri-tv-2-line"></i>TV shows</Link>
+                    <Link to="/people" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300"> <i className="mr-2 ri-team-fill"></i>People</Link>
                 </nav>
 
                 <nav className="flex flex-col text-zinc-400 text-lg gap-3">
                     <h1 className="text-white font-semibold whitespace-nowrap">Website Information</h1>
-                    <Link to="/subscription" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300">Subscription</Link>
-                    <Link to="/contactus" className="p-3 hover:text-white hover:bg-[#FF005C] whitespace-nowrap hover:rounded-lg duration-300">Contact Us</Link>
-                    <button onClick={logout} className="px-4 py-2 bg-zinc-400 hover:bg-[#FF005C] rounded text-xl text-white font-semibold">
-                        Logout
+                    <Link to="/subscription" className="p-3 hover:text-white hover:bg-[#FF005C] hover:rounded-lg duration-300"><i class="ri-rss-line"></i>Subscription</Link>
+                    <Link to="/contactus" className="p-3 hover:text-white hover:bg-[#FF005C] whitespace-nowrap hover:rounded-lg duration-300"><i className="mr-2 ri-phone-fill"></i>Contact Us</Link>
+                    <button onClick={logout} className="px-4 py-2 bg-[#FF005C] rounded text-xl text-white font-semibold">
+                       <i class="text-white ri-logout-box-line"></i> Logout
                     </button>
                 </nav>
             </div>
