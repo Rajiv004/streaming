@@ -48,12 +48,12 @@ function Mobilesidenav({ logout }) {
                     )}
                 </div>
 
-                <div className="absolute top-12 sm:left-15 max-h-[52vh] overflow-auto rounded">
+                <div className="absolute top-12 left-15 max-h-[52vh] overflow-auto rounded">
                     {searches.map((s, i) => (
                         <Link
                             to={`/${s.media_type}/details/${s.id}`}
                             key={i}
-                            className="text-lg font-semibold text-zinc-500 w-full p-3 bg-zinc-700 flex items-center border-b border-zinc-500 hover:text-black hover:bg-zinc-600 duration-300"
+                            className="text-lg font-semibold text-zinc-500 w-full p-3 bg-white/10 backdrop-blur-sm flex items-center border-b border-zinc-500 hover:text-black hover:bg-zinc-600 duration-300"
                         >
                             <img
                                 className="w-[8vh] h-[7vh] mr-5 md:mr-10 object-cover rounded shadow-md"
