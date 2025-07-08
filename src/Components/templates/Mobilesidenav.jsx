@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import noimage from '/noimage.webp';
 
-function Mobilesidenav({logout}) {
-    
+function Mobilesidenav({ logout }) {
+
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [searches, setSearches] = useState([]);
@@ -23,34 +23,32 @@ function Mobilesidenav({logout}) {
     }, [query]);
 
     return (
-        <div className="block lg:hidden w-full flex justify-center relative z-10">
-            <div className="items-center w-full h-fit">
-                <div className="flex  justify-between items-center mx-1 sm:mx-5">
-                    <div>
-                        <i class="text-2xl text-zinc-200 ri-search-line"></i>
+        <div className="block lg:hidden my-2 w-full   flex  justify-center  z-10">
+            <div className="flex w-full">
+                <div className="flex w-full"> {/* Add w-full here */}
+                    <div className="flex w-full mx-2 justify-between"> {/* Add w-full here */}
+                        <i className="text-2xl text-zinc-200 ri-search-line"></i>
                         <input
                             onChange={(e) => setQuery(e.target.value)}
                             value={query}
-                            className="text-lg w-[20vh] ml-3 bg-transparent  outline-none text-zinc-100"
+                            className="text-l bg-white/10 backdrop-blur-lg border-1 border-white p-1 rounded-sm outline-none text-zinc-100 w-full mx-2" // add w-full and maybe mx-2 for spacing
                             type="text"
                             placeholder="search"
                         />
+                        <i
+                            onClick={() => setIsOpen(true)}
+                            className="text-white text-2xl font-semibold ri-menu-line cursor-pointer"
+                        ></i>
                     </div>
-
                     {query.length > 0 && (
                         <i
                             onClick={() => setQuery("")}
-                            className="text-3xl text-zinc-200 ri-close-line cursor-pointer"
+                            className="text-3xl text-zinc-200 ri-close-line cursor-pointer ml-2"
                         ></i>
                     )}
-
-                    <i
-                        onClick={() => setIsOpen(true)}
-                        className="text-white text-lg font-semibold ri-menu-line cursor-pointer"
-                    ></i>
                 </div>
 
-                <div className="absolute top-12 left-5 sm:left-15 max-h-[52vh] overflow-auto rounded">
+                <div className="absolute top-12 sm:left-15 max-h-[52vh] overflow-auto rounded">
                     {searches.map((s, i) => (
                         <Link
                             to={`/${s.media_type}/details/${s.id}`}
@@ -73,6 +71,7 @@ function Mobilesidenav({logout}) {
                     ))}
                 </div>
             </div>
+
 
             {/* Sidenav */}
             <div

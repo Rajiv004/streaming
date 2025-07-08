@@ -35,10 +35,10 @@ function Moviedetails() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full h-full px-[10%] overflow-y-auto relative"
+      className="w-full h-full  px-1 lg:px-[5%] overflow-y-auto relative"
     >
       {/*part 1 navigation*/}
-      <nav className="h-[10vh] w-full text-white flex items-center gap-10 text-2xl ">
+      <nav className="h-[10vh] w-full text-white flex justify-center  items-center gap-10 text-2xl ">
         <Link
           onClick={() => navigate(-1)}
           className="text-white text-3xl hover:text-[#FF005C]  ri-arrow-left-line"
@@ -70,10 +70,10 @@ function Moviedetails() {
       <div className="">
         <div className="">
 
-          <div className="md:flex">
-            <div className="">
+          <div className=" lg:flex ">
+            <div className="flex flex-col justify-center items-center lg:block">
               <img
-                className="shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] h-[60vh] w-[80%] object-cover  border-2 border-zinc-300  "
+                className="shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] w-70  lg:h-[80vh] lg:w-full object-cover  border-2 border-zinc-300  "
                 src={`https://image.tmdb.org/t/p/original/${info.detail.poster_path || info.detail.backdrop_path
                   }`}
                 alt="img"
@@ -132,7 +132,7 @@ function Moviedetails() {
 
 
             {/* part 3 available on platform*/}
-            <div className="content md:ml-20 text-white">
+            <div className="content lg:ml-20 text-white">
               <h1 className=" text-5xl font-bold  ">
                 {info.detail.name || info.detail.title || info.detail.original_name || info.detail.original_title}
                 <small className="text-sm ml-2 text-zinc-400">({info.detail.release_date.split("-")[0]})</small>
