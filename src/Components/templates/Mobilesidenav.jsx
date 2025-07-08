@@ -48,7 +48,7 @@ function Mobilesidenav({ logout }) {
                     )}
                 </div>
 
-                <div className="absolute top-12 left-15 max-h-[52vh] overflow-auto rounded">
+                <div className="absolute top-12 left-15 max-h-[52vh] overflow-auto rounded z-30">
                     {searches.map((s, i) => (
                         <Link
                             to={`/${s.media_type}/details/${s.id}`}
